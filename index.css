@@ -23,13 +23,15 @@ div#npc_maker {
 
 div#profile_pic {
   position: relative;
+  margin: 10px;
+  height: 500px;
 }
 
 div#base_npc {
   position: absolute;
   left: 0px;
   top: 0px;
-  z-index: -1; /* Keep this image on the bottom */
+  z-index: 0; /* Keep this image on the bottom */
 }
 
 div#head, div#eyes, div#lower {
