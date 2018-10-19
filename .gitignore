@@ -1,0 +1,5 @@
+# Mac Things
+.DS_Store
+
+# Graphics Things
+graphics_files/*

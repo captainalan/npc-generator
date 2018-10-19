@@ -1,0 +1,40 @@
+h1 {
+  color: white;
+  background: #3B5998;
+  padding: 5px;
+}
+
+button {
+ color: white; 
+ background: #6086c1;
+ padding: 5px;
+ font-size: 14pt;
+}
+
+div#intro_text {
+  position: relative;
+}
+
+div#npc_maker {
+  position: relative;
+  padding: 10px;
+  background: #eff2f7;
+}
+
+div#profile_pic {
+  position: relative;
+}
+
+div#base_npc {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1; /* Keep this image on the bottom */
+}
+
+div#head, div#eyes, div#lower {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
