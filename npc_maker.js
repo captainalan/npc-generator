@@ -1,11 +1,9 @@
-elm = document.getElementById("npc_maker");
-
+/* Optional items to randomly render on base character */
 const WARDROBE = {
   head:['plain','cowboy_hat', 'cat_ears',],
   eyes:['plain','glowing','glasses',],
   lower:['plain','bandana','bane_mask',],
 }
-
 
 function randomWardrobe(wardrobe){
   /* Expects an object structured like the WARDROBE const above.
@@ -18,16 +16,6 @@ function randomWardrobe(wardrobe){
   return result;
 }
 
-function arrayOfRands(min = 0, max = 10, length = 1) {
-  /* Return an array of size length of random ints */
-  let result = [];
-  for(let i = 0; i < length; i++) {
-    result[i] = Math.floor(Math.random() * max);
-  }
-  return result;
-}
-
-
 class nonPlayableCharacter { 
 
   constructor() {
@@ -35,7 +23,6 @@ class nonPlayableCharacter {
     this.portrait = {}
     let myWardrobe = randomWardrobe(WARDROBE);
     let myKeys = Object.keys(myWardrobe);
-    console.log(`myW: ${toString(myWardrobe)}, myK ${myKeys}`);
 
     myKeys.forEach( key => {
       this.portrait[key] = WARDROBE[key][myWardrobe[key]]
@@ -50,7 +37,6 @@ class nonPlayableCharacter {
       + `<div id="eyes"><img id='eyes' src='./img/eyes/${this.portrait.eyes}.png'></div>`
       + `<div id="lower"><img id='lower' src='./img/lower/${this.portrait.lower}.png'></div>`;
   };
-  
 }
 
 function main() {
@@ -59,4 +45,3 @@ function main() {
 }
 
 main();
-
